@@ -4,7 +4,7 @@ package dao;
 import factory.Conexao;
 import gui.Login;
 import gui.MenuAluno;
-import gui.MenuPrincipal;
+import gui.MenuProfessor;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -25,6 +25,7 @@ public class UsuarioDAO {
     private int id;
     private String username;
     private String senha;
+    private String turma;
     public Object rs;
 
     
@@ -35,14 +36,15 @@ public class UsuarioDAO {
 
      public void inserir(Usuario usuario){
     
-        String sql = "INSERT INTO aluno(nome, senha, perfil) "
-                + "VALUES(?,?,?)";
+        String sql = "INSERT INTO aluno(nome, senha,turma, perfil) "
+                + "VALUES(?,?,?,?)";
         
        try{
            PreparedStatement stmt = connection.prepareStatement(sql);
            stmt.setString(1, usuario.getUsername());
            stmt.setString(2, usuario.getSenha());
-           stmt.setString(3, usuario.getPerfil());
+           stmt.setString(3, usuario.getTurma());
+           stmt.setString(4, usuario.getPerfil());
            stmt.execute();
            stmt.close();
            
@@ -65,7 +67,8 @@ public class UsuarioDAO {
             if(rs.next()){
                 consulta.setUsername(rs.getString(2));
                 consulta.setSenha(rs.getString(3));
-                consulta.setPerfil(rs.getString(4));
+                consulta.setTurma(rs.getString(4));
+                consulta.setPerfil(rs.getString(5));
             
             }
             else{

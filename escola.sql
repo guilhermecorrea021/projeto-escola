@@ -1,18 +1,16 @@
-create database backoffice;
+create database escola;
 
-use backoffice;
+use escola;
 
-create table usuarios(
+create table aluno (
+id_aluno int not null auto_increment,
+nome varchar(100),
+senha varchar(30),
+turma varchar(10),
+perfil enum("Aluno", "Professor", "Administrador"),
+primary key (id_aluno));
 
-	id_usuarios int(5) auto_increment primary key,
-    username varchar(100) not null,
-    senha varchar(10) not null,
-    perfil enum("administrador", "auxiliar")
-);
+insert into aluno(nome, senha, turma, perfil)
+values("Guilherme","12345", "3001", "Aluno");
 
-describe usuarios;
-
-insert into usuarios(username, senha, perfil)
-values("Guilherme", "12345", "administrador");
-
-select * from usuarios;
+select * from aluno;

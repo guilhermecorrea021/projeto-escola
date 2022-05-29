@@ -7,15 +7,10 @@ public class Usuario {
     private int id;
     private String username;
     private String senha;
+    private String turma;
     private String perfil;
-
-    public Usuario(int id, String username, String senha, String perfil) {
-        this.id = id;
-        this.username = username;
-        this.senha = senha;
-        this.perfil = perfil;
-    }
     
+
     public Usuario(){
         
         
@@ -25,6 +20,7 @@ public class Usuario {
         this.id = id;
         this.username = username;
         this.senha = senha;
+        this.turma = turma;
         this.perfil = perfil;
     }
 
@@ -51,6 +47,14 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+    
+        public String getTurma() {
+        return turma;
+    }
+
+    public void setTurma(String turma) {
+        this.turma = turma;
+    }
 
     public String getPerfil() {
         return perfil;
@@ -59,5 +63,5 @@ public class Usuario {
     public void setPerfil(String perfil) {
         this.perfil = perfil;
     }  
-    
+
 }

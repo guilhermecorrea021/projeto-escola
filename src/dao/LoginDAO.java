@@ -3,8 +3,9 @@ package dao;
 
 import factory.Conexao;
 import gui.Login;
+import gui.MenuAdministrador;
 import gui.MenuAluno;
-import gui.MenuPrincipal;
+import gui.MenuProfessor;
 import java.awt.Component;
 import static java.awt.SystemColor.menu;
 import java.sql.Connection;
@@ -67,12 +68,18 @@ public class LoginDAO {
                         
                         else if("Professor".equals(perfil)){
                            JOptionPane.showMessageDialog(null,"Conectado com sucesso");
-                           MenuPrincipal menu = new MenuPrincipal();
+                           MenuProfessor menu = new MenuProfessor();
                            menu.setVisible(true);
                            this.gui.dispose();
                         }
-                    
-                    
+                        
+                        else if("Administrador".equals(perfil)){
+                           JOptionPane.showMessageDialog(null,"Conectado com sucesso");
+                           MenuAdministrador admin = new MenuAdministrador();
+                           admin.setVisible(true);
+                           this.gui.dispose();
+                        }
+                     
 
                     else {
                         JOptionPane.showMessageDialog(null,"Usuário e/ou senha incorretos.");
