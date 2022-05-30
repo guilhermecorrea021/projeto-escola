@@ -84,7 +84,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         txtPerfil2 = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
-        TxtSenha = new javax.swing.JTextField();
+        txtSenha = new javax.swing.JPasswordField();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtTable = new javax.swing.JTable();
@@ -201,8 +201,14 @@ public class MenuAdministrador extends javax.swing.JFrame {
         jLabel7.setText("SENHA:");
         jLabel7.setToolTipText("");
 
-        TxtSenha.setBackground(new java.awt.Color(204, 204, 204));
-        TxtSenha.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtSenha.setBackground(new java.awt.Color(204, 204, 204));
+        txtSenha.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtSenha.setToolTipText("SENHA");
+        txtSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSenhaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -247,10 +253,13 @@ public class MenuAdministrador extends javax.swing.JFrame {
                                     .addComponent(jLabel6)
                                     .addComponent(jLabel7))
                                 .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TxtTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtPerfil2, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TxtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(TxtTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtPerfil2, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(3, 3, 3))
+                                    .addComponent(txtSenha))))))
                 .addGap(308, 308, 308))
         );
         jPanel1Layout.setVerticalGroup(
@@ -269,12 +278,12 @@ public class MenuAdministrador extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TxtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TxtTurma, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtPerfil2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -289,7 +298,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addComponent(btnPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnAltualizar, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
                     .addComponent(btnLimpar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -308,7 +317,23 @@ public class MenuAdministrador extends javax.swing.JFrame {
         txtTable.setAutoCreateRowSorter(true);
         txtTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
                 "id", "nome", "senha", "turma", "perfil"
@@ -352,8 +377,8 @@ public class MenuAdministrador extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(389, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(373, 373, 373))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(381, 381, 381))
         );
 
         getContentPane().add(jPanel2);
@@ -423,7 +448,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
                 java.sql.Statement st = conn.createStatement();
                 st.executeUpdate("UPDATE aluno SET nome='"
                     + this.TxtUsername.getText() + "',senha='"
-                    + this.TxtSenha.getText()+ "',turma='"
+                    + this.txtSenha.getText()+ "',turma='"
                     + this.TxtTurma.getText()+ "',perfil='"
                     + this.txtPerfil2.getSelectedItem()
                     + "' WHERE nome='" + this.TxtUsername.getText() + "'");
@@ -432,7 +457,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(rootPane, e);
             }//Fim try
             TxtUsername.setText("");
-            TxtSenha.setText("");
+            txtSenha.setText("");
             TxtTurma.setText("");
             txtPerfil2.setSelectedItem("");
 
@@ -442,12 +467,12 @@ public class MenuAdministrador extends javax.swing.JFrame {
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         Usuario usuario = new Usuario();
         usuario.setUsername(TxtUsername.getText());
-        usuario.setSenha(TxtSenha.getText());
+        usuario.setSenha(txtSenha.getText());
         usuario.setTurma(TxtTurma.getText());
         usuario.setPerfil((String) txtPerfil2.getSelectedItem());
 
         if (TxtUsername.getText().isEmpty()||
-            TxtSenha.getText().isEmpty()){
+            txtSenha.getText().isEmpty()){
 
             JOptionPane.showMessageDialog(null, "Os campos não podem retornar vazios");
 
@@ -463,7 +488,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
         }
 
         TxtUsername.setText("");
-        TxtSenha.setText("");
+        txtSenha.setText("");
         TxtTurma.setText("");
         txtPerfil2.setSelectedItem("");
     }//GEN-LAST:event_btnSalvarActionPerformed
@@ -487,7 +512,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(rootPane, e);
             }
             TxtUsername.setText("");
-            TxtSenha.setText("");
+            txtSenha.setText("");
             TxtTurma.setText("");
             txtPerfil2.setSelectedItem("");
 
@@ -501,6 +526,10 @@ public class MenuAdministrador extends javax.swing.JFrame {
     private void txtPerfil2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPerfil2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPerfil2ActionPerformed
+
+    private void txtSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSenhaActionPerformed
 
     private void carregaTabela() throws SQLException{
         
@@ -577,7 +606,6 @@ public class MenuAdministrador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField TxtSenha;
     private javax.swing.JTextField TxtTurma;
     private javax.swing.JTextField TxtUsername;
     private javax.swing.JButton btnAltualizar;
@@ -597,6 +625,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField txtId;
     private javax.swing.JComboBox<String> txtPerfil2;
+    private javax.swing.JPasswordField txtSenha;
     private javax.swing.JTable txtTable;
     // End of variables declaration//GEN-END:variables
 }
