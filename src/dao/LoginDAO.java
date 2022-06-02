@@ -52,7 +52,7 @@ public class LoginDAO {
                 DriverManager.getConnection("jdbc:mysql://localhost:3306/escola?useTimezone=true&serverTimezone=UTC","root","12345"); 
                 Statement stmt = (Statement) conn.createStatement()) {
 
-           String query = "select * from aluno where nome = '" + nome +"' and senha = '" + senha + "'";
+           String query = "select * from aluno where nome = '" + nome +"' and senha = '" + senha +"'";
 
                 try (ResultSet rs = stmt.executeQuery(query)) {
                     if (rs.next()) {

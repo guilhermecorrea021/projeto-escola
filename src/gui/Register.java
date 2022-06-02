@@ -31,7 +31,7 @@ public class Register extends javax.swing.JFrame {
      private final UsuarioDAO controller;
 
     public Register() {
-    setTitle("Cadastro de Usuário");
+    setTitle("Cadastro Solano");
     initComponents();
         this.setLocationRelativeTo(null);  
         controller = new UsuarioDAO();
@@ -68,6 +68,7 @@ public class Register extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("SIstema Solano");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(135, 206, 235));
@@ -93,7 +94,7 @@ public class Register extends javax.swing.JFrame {
             }
         });
 
-        btnSalvar.setBackground(new java.awt.Color(0, 102, 255));
+        btnSalvar.setBackground(new java.awt.Color(51, 204, 0));
         btnSalvar.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
         btnSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/icons8_save_30px.png"))); // NOI18N
         btnSalvar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -103,7 +104,7 @@ public class Register extends javax.swing.JFrame {
             }
         });
 
-        btnAltualizar.setBackground(new java.awt.Color(0, 102, 255));
+        btnAltualizar.setBackground(new java.awt.Color(102, 153, 255));
         btnAltualizar.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
         btnAltualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/icons8_update_left_rotation_30px.png"))); // NOI18N
         btnAltualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -113,7 +114,7 @@ public class Register extends javax.swing.JFrame {
             }
         });
 
-        btnLimpar.setBackground(new java.awt.Color(0, 102, 255));
+        btnLimpar.setBackground(new java.awt.Color(204, 51, 255));
         btnLimpar.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
         btnLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/icons8_broom_30px.png"))); // NOI18N
         btnLimpar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -123,7 +124,7 @@ public class Register extends javax.swing.JFrame {
             }
         });
 
-        btnExcluir.setBackground(new java.awt.Color(0, 102, 255));
+        btnExcluir.setBackground(new java.awt.Color(255, 0, 51));
         btnExcluir.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
         btnExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/icons8_trash_30px.png"))); // NOI18N
         btnExcluir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -182,7 +183,7 @@ public class Register extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/icons8_user_30px.png"))); // NOI18N
 
-        btnLogin.setBackground(new java.awt.Color(0, 102, 255));
+        btnLogin.setBackground(new java.awt.Color(51, 102, 255));
         btnLogin.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
         btnLogin.setText("Já possui uma conta? Faça login");
         btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -192,14 +193,18 @@ public class Register extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Tw Cen MT", 1, 30)); // NOI18N
-        jLabel7.setText("TELA DE REGISTRO");
+        jLabel7.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
+        jLabel7.setText("REGISTRO SOLANO");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 36, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
@@ -238,11 +243,7 @@ public class Register extends javax.swing.JFrame {
                         .addGap(87, 87, 87))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel7)
-                        .addGap(79, 79, 79))))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 36, Short.MAX_VALUE))
+                        .addGap(52, 52, 52))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -312,7 +313,7 @@ public class Register extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 530));
 
-        setSize(new java.awt.Dimension(830, 577));
+        setSize(new java.awt.Dimension(830, 576));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
