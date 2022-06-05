@@ -127,7 +127,7 @@
                                   </Group>
                                   <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="btnAltualizar" pref="71" max="32767" attributes="0"/>
+                                      <Component id="btnAtualizar" pref="71" max="32767" attributes="0"/>
                                       <Component id="btnExcluir" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -223,7 +223,7 @@
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="btnAltualizar" pref="60" max="32767" attributes="0"/>
+                      <Component id="btnAtualizar" pref="60" max="32767" attributes="0"/>
                       <Component id="btnLimpar" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
@@ -349,7 +349,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimparActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnAltualizar">
+        <Component class="javax.swing.JButton" name="btnAtualizar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="99" red="66" type="rgb"/>
@@ -365,7 +365,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAltualizarActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAtualizarActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnSalvar">

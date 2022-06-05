@@ -39,7 +39,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
 
               ResultSet resultado = banco.executeQuery(sql);
 
-              DefaultTableModel model =(DefaultTableModel) txtTable.getModel();
+           DefaultTableModel model =(DefaultTableModel) txtTable.getModel();
            model.setNumRows(0);
 
            while(resultado.next())
@@ -77,7 +77,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
         TxtTurma = new javax.swing.JTextField();
         btnPesquisar = new javax.swing.JButton();
         btnLimpar = new javax.swing.JButton();
-        btnAltualizar = new javax.swing.JButton();
+        btnAtualizar = new javax.swing.JButton();
         btnSalvar = new javax.swing.JButton();
         btnExcluir = new javax.swing.JButton();
         txtId = new javax.swing.JTextField();
@@ -147,13 +147,13 @@ public class MenuAdministrador extends javax.swing.JFrame {
             }
         });
 
-        btnAltualizar.setBackground(new java.awt.Color(102, 153, 255));
-        btnAltualizar.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
-        btnAltualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/icons8_update_left_rotation_30px.png"))); // NOI18N
-        btnAltualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnAltualizar.addActionListener(new java.awt.event.ActionListener() {
+        btnAtualizar.setBackground(new java.awt.Color(102, 153, 255));
+        btnAtualizar.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
+        btnAtualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/icons8_update_left_rotation_30px.png"))); // NOI18N
+        btnAtualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAtualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAltualizarActionPerformed(evt);
+                btnAtualizarActionPerformed(evt);
             }
         });
 
@@ -237,7 +237,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
                                     .addComponent(btnLimpar, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addGap(143, 143, 143)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(btnAltualizar, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+                                    .addComponent(btnAtualizar, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
                                     .addComponent(btnExcluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel5)
@@ -306,7 +306,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
                         .addComponent(btnPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnAltualizar, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+                    .addComponent(btnAtualizar, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
                     .addComponent(btnLimpar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -425,7 +425,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
         txtId.setEnabled(true);
         btnPesquisar.setEnabled(true);
         btnLimpar.setEnabled(false);
-        btnAltualizar.setEnabled(true);
+        btnAtualizar.setEnabled(true);
         btnSalvar.setEnabled(true);
         TxtUsername.setEnabled(true);
         TxtTurma.setEnabled(true);
@@ -470,7 +470,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
         TxtTurma.setText("");
     }//GEN-LAST:event_btnLimparActionPerformed
 
-    private void btnAltualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAltualizarActionPerformed
+    private void btnAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarActionPerformed
         if (TxtUsername.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Digite o nome.");
         }
@@ -496,7 +496,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
             txtPerfil2.setSelectedItem("");
 
         }
-    }//GEN-LAST:event_btnAltualizarActionPerformed
+    }//GEN-LAST:event_btnAtualizarActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         Usuario usuario = new Usuario();
@@ -564,8 +564,25 @@ public class MenuAdministrador extends javax.swing.JFrame {
     private void txtSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSenhaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSenhaActionPerformed
-
-    private void carregaTabela() throws SQLException{
+    private void jUsuariosMouseClicked(java.awt.event.MouseEvent evt) {
+        
+        txtId.setEnabled(true);
+        btnPesquisar.setEnabled(true);
+        btnSalvar.setEnabled(false);
+        btnAtualizar.setEnabled(true);
+        btnExcluir.setEnabled(true);
+        TxtUsername.setEnabled(true);
+        txtSenha.setEnabled(true);
+        txtPerfil2.setEnabled(true);
+        
+        int linha = txtTable.getSelectedRow();
+        txtId.setText(txtTable.getValueAt(linha,0).toString()); 
+        TxtUsername.setText(txtTable.getValueAt(linha,1).toString()); 
+        txtSenha.setText(txtTable.getValueAt(linha,2).toString()); 
+        txtPerfil2.setSelectedItem(txtTable.getValueAt(linha,3).toString()); 
+    }
+    
+    private void carregaTabela(){
         
         DefaultTableModel modelo = (DefaultTableModel) txtTable.getModel();
         modelo.setNumRows(0);
@@ -574,9 +591,9 @@ public class MenuAdministrador extends javax.swing.JFrame {
         txtTable.getColumnModel().getColumn(1).setPreferredWidth(25);
         txtTable.getColumnModel().getColumn(2).setPreferredWidth(25);
         txtTable.getColumnModel().getColumn(3).setPreferredWidth(25);
-        txtTable.getColumnModel().getColumn(3).setPreferredWidth(25);
         
-         try{
+        
+        try {
             
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/escola?useTimezone=true"+"&serverTimezone=UTC","root","12345");
             PreparedStatement pstm;
@@ -590,20 +607,23 @@ public class MenuAdministrador extends javax.swing.JFrame {
                     rs.getInt(1),
                     rs.getString(2),
                     rs.getString(3),
-                    rs.getString(4)    
+                    rs.getString(4)
+                   
+                       
                 
             });
             }
             pstm.close();
             conn.close();
-                       
-        } catch (Exception ErroSql) {
+            
+            
+        } catch (SQLException ErroSql) {
             
             JOptionPane.showMessageDialog(null, "Erro ao carregar os dados da tabela" + ErroSql, "Erro", JOptionPane.ERROR_MESSAGE );
         }
         
     }
-            
+    
     /**
      * @param args the command line arguments
      */
@@ -639,10 +659,11 @@ public class MenuAdministrador extends javax.swing.JFrame {
         });
     }
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField TxtTurma;
     private javax.swing.JTextField TxtUsername;
-    private javax.swing.JButton btnAltualizar;
+    private javax.swing.JButton btnAtualizar;
     private javax.swing.JButton btnExcluir;
     private javax.swing.JButton btnLimpar;
     private javax.swing.JButton btnPesquisar;

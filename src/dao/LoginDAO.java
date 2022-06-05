@@ -27,18 +27,17 @@ public class LoginDAO {
     private String nome;
     private String senha;
     private String perfil;
-    private final Login gui;
-    
+    private Login gui;
+
     
     
      public LoginDAO(Login gui){ 
         this.connection = Conexao.getConnection();
         this.gui = gui;
     
-     }
+     }    
      
-   
-     
+       
      public void logar(){
        
          
@@ -60,21 +59,21 @@ public class LoginDAO {
                        String perfil = rs.getString("perfil");
        
                         if("Aluno".equals(perfil)){
-                           JOptionPane.showMessageDialog(null,"Conectado com sucesso");
+                           JOptionPane.showMessageDialog(null,"Conectado com sucesso! Seja Bem-Vindo!");
                            MenuAluno aluno = new MenuAluno();
                            aluno.setVisible(true);
                            this.gui.dispose();
                         }
                         
                         else if("Professor".equals(perfil)){
-                           JOptionPane.showMessageDialog(null,"Conectado com sucesso");
+                           JOptionPane.showMessageDialog(null,"Conectado com sucesso! Seja Bem-Vindo!");
                            MenuProfessor menu = new MenuProfessor();
                            menu.setVisible(true);
                            this.gui.dispose();
                         }
                         
                         else if("Administrador".equals(perfil)){
-                           JOptionPane.showMessageDialog(null,"Conectado com sucesso");
+                           JOptionPane.showMessageDialog(null,"Conectado com sucesso! Seja Bem-Vindo!");
                            MenuAdministrador admin = new MenuAdministrador();
                            admin.setVisible(true);
                            this.gui.dispose();
@@ -82,7 +81,7 @@ public class LoginDAO {
                      
 
                     else {
-                        JOptionPane.showMessageDialog(null,"Usuário e/ou senha incorretos.");
+                        JOptionPane.showMessageDialog(null,"Usuário ou senha incorretos! Tente Novamente!");
                         gui.getTxtUsername().setText("");
                         gui.getTxtSenha().setText("");
                         
@@ -93,11 +92,7 @@ public class LoginDAO {
         } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
-        } catch (InstantiationException ex) {
-            Logger.getLogger(LoginDAO.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            Logger.getLogger(LoginDAO.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
+        } catch (InstantiationException | IllegalAccessException | ClassNotFoundException ex) {
             Logger.getLogger(LoginDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         

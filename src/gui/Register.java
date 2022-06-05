@@ -49,7 +49,7 @@ public class Register extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         btnPesquisar = new javax.swing.JButton();
         btnSalvar = new javax.swing.JButton();
-        btnAltualizar = new javax.swing.JButton();
+        btnAtualizar = new javax.swing.JButton();
         btnLimpar = new javax.swing.JButton();
         btnExcluir = new javax.swing.JButton();
         txtSenha = new javax.swing.JPasswordField();
@@ -104,13 +104,13 @@ public class Register extends javax.swing.JFrame {
             }
         });
 
-        btnAltualizar.setBackground(new java.awt.Color(102, 153, 255));
-        btnAltualizar.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
-        btnAltualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/icons8_update_left_rotation_30px.png"))); // NOI18N
-        btnAltualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnAltualizar.addActionListener(new java.awt.event.ActionListener() {
+        btnAtualizar.setBackground(new java.awt.Color(102, 153, 255));
+        btnAtualizar.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
+        btnAtualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/icons8_update_left_rotation_30px.png"))); // NOI18N
+        btnAtualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAtualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAltualizarActionPerformed(evt);
+                btnAtualizarActionPerformed(evt);
             }
         });
 
@@ -239,7 +239,7 @@ public class Register extends javax.swing.JFrame {
                                 .addGap(66, 66, 66)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(btnExcluir)
-                                    .addComponent(btnAltualizar, javax.swing.GroupLayout.Alignment.TRAILING))))
+                                    .addComponent(btnAtualizar, javax.swing.GroupLayout.Alignment.TRAILING))))
                         .addGap(87, 87, 87))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel7)
@@ -273,7 +273,7 @@ public class Register extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnLimpar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAltualizar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnAtualizar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSalvar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -350,7 +350,7 @@ public class Register extends javax.swing.JFrame {
         txtTurma.setText("");
     }//GEN-LAST:event_btnLimparActionPerformed
 
-    private void btnAltualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAltualizarActionPerformed
+    private void btnAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarActionPerformed
         if (txtUsername.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Digite o nome.");
         }
@@ -376,7 +376,7 @@ public class Register extends javax.swing.JFrame {
             txtPerfil2.setSelectedItem("");
 
         }
-    }//GEN-LAST:event_btnAltualizarActionPerformed
+    }//GEN-LAST:event_btnAtualizarActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         Usuario usuario = new Usuario();
@@ -415,7 +415,7 @@ public class Register extends javax.swing.JFrame {
         txtId.setEnabled(true);
         btnPesquisar.setEnabled(true);
         btnLimpar.setEnabled(false);
-        btnAltualizar.setEnabled(true);
+        btnAtualizar.setEnabled(true);
         btnSalvar.setEnabled(true);
         txtUsername.setEnabled(true);
         txtSenha.setEnabled(true);
@@ -489,13 +489,7 @@ public class Register extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Register.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Register.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Register.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Register.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
@@ -507,7 +501,7 @@ public class Register extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAltualizar;
+    private javax.swing.JButton btnAtualizar;
     private javax.swing.JButton btnExcluir;
     private javax.swing.JButton btnLimpar;
     private javax.swing.JButton btnLogin;
