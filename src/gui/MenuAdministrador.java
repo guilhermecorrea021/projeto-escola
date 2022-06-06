@@ -66,6 +66,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         jPanel1 = new javax.swing.JPanel();
         TxtUsername = new javax.swing.JTextField();
@@ -361,6 +362,10 @@ public class MenuAdministrador extends javax.swing.JFrame {
             }
         });
         txtTable.getTableHeader().setReorderingAllowed(false);
+
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, txtTable, org.jdesktop.beansbinding.ObjectProperty.create(), txtTable, org.jdesktop.beansbinding.BeanProperty.create("elements"));
+        bindingGroup.addBinding(binding);
+        binding.bind();
         jScrollPane1.setViewportView(txtTable);
         if (txtTable.getColumnModel().getColumnCount() > 0) {
             txtTable.getColumnModel().getColumn(0).setResizable(false);
@@ -417,6 +422,8 @@ public class MenuAdministrador extends javax.swing.JFrame {
         jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
+
+        bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -688,5 +695,6 @@ public class MenuAdministrador extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> txtPerfil2;
     private javax.swing.JPasswordField txtSenha;
     private javax.swing.JTable txtTable;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

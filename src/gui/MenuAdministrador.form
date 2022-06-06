@@ -570,6 +570,9 @@
                   <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
                 </Property>
               </Properties>
+              <BindingProperties>
+                <BindingProperty name="elements" source="txtTable" target="txtTable" targetPath="elements" updateStrategy="0" immediately="true"/>
+              </BindingProperties>
             </Component>
           </SubComponents>
         </Container>
