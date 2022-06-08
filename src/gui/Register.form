@@ -308,7 +308,7 @@
               <StringArray count="3">
                 <StringItem index="0" value="Aluno"/>
                 <StringItem index="1" value="Professor"/>
-                <StringItem index="2" value="Administrador"/>
+                <StringItem index="2" value="Coordenador"/>
               </StringArray>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>

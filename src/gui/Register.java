@@ -146,7 +146,7 @@ public class Register extends javax.swing.JFrame {
 
         txtPerfil2.setBackground(new java.awt.Color(204, 204, 204));
         txtPerfil2.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
-        txtPerfil2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aluno", "Professor", "Administrador" }));
+        txtPerfil2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aluno", "Professor", "Coordenador" }));
         txtPerfil2.setToolTipText("");
         txtPerfil2.setActionCommand("");
         txtPerfil2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

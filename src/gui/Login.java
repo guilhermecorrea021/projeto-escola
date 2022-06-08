@@ -25,8 +25,8 @@ public class Login extends javax.swing.JFrame {
     
     public Login() {
         setTitle("Sistema Solano");
+        setExtendedState(MAXIMIZED_BOTH);
         initComponents();
-        this.setLocationRelativeTo(null);
         controller = new LoginDAO(this);
         
     }
@@ -51,6 +51,7 @@ public class Login extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -67,7 +68,9 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Sistema Solano");
-        setMinimumSize(new java.awt.Dimension(500, 500));
+        setMinimumSize(new java.awt.Dimension(1980, 1080));
+        setPreferredSize(new java.awt.Dimension(1980, 1080));
+        setSize(new java.awt.Dimension(1980, 1080));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(135, 206, 235));
@@ -135,7 +138,7 @@ public class Login extends javax.swing.JFrame {
 
         txtPerfil.setBackground(new java.awt.Color(204, 204, 204));
         txtPerfil.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
-        txtPerfil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aluno", "Professor", "Administrador" }));
+        txtPerfil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aluno", "Professor", "Coordenador" }));
         txtPerfil.setToolTipText("");
         txtPerfil.setActionCommand("");
         txtPerfil.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -224,7 +227,7 @@ public class Login extends javax.swing.JFrame {
                 .addGap(31, 31, 31))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, 410, 460));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 280, 410, 460));
 
         jPanel3.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -247,9 +250,25 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap(74, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 460));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 280, 390, 460));
 
-        setSize(new java.awt.Dimension(819, 507));
+        jPanel4.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel4.setPreferredSize(new java.awt.Dimension(1980, 1000));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1980, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1080, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1980, 1080));
+
+        setSize(new java.awt.Dimension(1998, 1127));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -321,6 +340,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JComboBox<String> txtPerfil;
     private javax.swing.JPasswordField txtSenha;
     private javax.swing.JTextField txtUsername;

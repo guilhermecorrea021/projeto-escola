@@ -3,7 +3,7 @@ package dao;
 
 import factory.Conexao;
 import gui.Login;
-import gui.MenuAdministrador;
+import gui.MenuCoordenador;
 import gui.MenuAluno;
 import gui.MenuProfessor;
 import java.awt.Component;
@@ -67,15 +67,15 @@ public class LoginDAO {
                         
                         else if("Professor".equals(perfil)){
                            JOptionPane.showMessageDialog(null,"Conectado com sucesso! Seja Bem-Vindo!");
-                           MenuProfessor menu = new MenuProfessor();
-                           menu.setVisible(true);
+                           MenuProfessor prof = new MenuProfessor();
+                           prof.setVisible(true);
                            this.gui.dispose();
                         }
                         
-                        else if("Administrador".equals(perfil)){
+                        else if("Coordenador".equals(perfil)){
                            JOptionPane.showMessageDialog(null,"Conectado com sucesso! Seja Bem-Vindo!");
-                           MenuAdministrador admin = new MenuAdministrador();
-                           admin.setVisible(true);
+                           MenuCoordenador coor = new MenuCoordenador();
+                           coor.setVisible(true);
                            this.gui.dispose();
                         }
                      
