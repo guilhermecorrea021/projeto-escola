@@ -6,6 +6,7 @@ import gui.Login;
 import gui.MenuCoordenador;
 import gui.MenuAluno;
 import gui.MenuProfessor;
+import gui.Register;
 import java.awt.Component;
 import static java.awt.SystemColor.menu;
 import java.sql.Connection;
@@ -28,11 +29,12 @@ public class LoginDAO {
     private String senha;
     private String perfil;
     private Login gui;
+    private Register cu;
 
     
     
      public LoginDAO(Login gui){ 
-        this.connection = Conexao.getConnection();
+        this.connection = new Conexao().getConnection();
         this.gui = gui;
     
      }    
@@ -92,12 +94,12 @@ public class LoginDAO {
         } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
-        } catch (InstantiationException | IllegalAccessException | ClassNotFoundException ex) {
+        
+     }  catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
             Logger.getLogger(LoginDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-     }
      
+     }
 }
      
 
