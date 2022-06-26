@@ -7,7 +7,7 @@ id_aluno int not null auto_increment,
 nome varchar(100),
 senha varchar(30),
 turma varchar(10),
-perfil enum("Aluno", "Professor", "Administrador"),
+perfil enum("Aluno", "Professor", "Coordenador"),
 primary key (id_aluno));
 
 insert into aluno(nome, senha, turma, perfil)
