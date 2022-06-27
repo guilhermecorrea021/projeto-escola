@@ -13,4 +13,10 @@ primary key (id_aluno));
 insert into aluno(nome, senha, turma, perfil)
 values("Guilherme","12345", "3001", "Aluno");
 
+insert into aluno(nome, senha, turma, perfil)
+values("Felippe","12345", "3001", "Professor");
+
+insert into aluno(nome, senha, turma, perfil)
+values("William","12345", "", "Coodernador");
+
 select * from aluno;

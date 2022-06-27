@@ -81,26 +81,26 @@ public class LoginDAO {
                            this.gui.dispose();
                         }
                      
-
+                    }
+                    
                     else {
-                        JOptionPane.showMessageDialog(null,"Usuário ou senha incorretos! Tente Novamente!");
+                        JOptionPane.showMessageDialog(null,"Usuário ou senha incorretos!");
                         gui.getTxtUsername().setText("");
                         gui.getTxtSenha().setText("");
                         
                     }   
                 }
-        
               }
         } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-     }  catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
             Logger.getLogger(LoginDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
-     
+        
      }
-}
+        }
+     
+ 
      
 
 
